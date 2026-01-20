@@ -1,0 +1,12 @@
+FROM rakudo-star:latest
+
+RUN curl https://rakubrew.org/install-on-perl.sh | sh
+
+RUN /root/.rakubrew/bin/rakubrew mode shim
+RUN /root/.rakubrew/bin/rakubrew build-zef
+
+RUN zef install Sparrowdo
+
+WORKDIR /app
+
+CMD [ "sparrowdo" ]
