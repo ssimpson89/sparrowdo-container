@@ -9,7 +9,7 @@ podman run --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/app ghcr.io/ssimpson89/sparr
 You can also create an alias:
 
 ```bash
-alias sparrowdo="podman run --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/app localhost/sparrow:dev sparrowdo"
+alias sparrowdo="podman run --rm -v $HOME/.ssh:/root/.ssh -v $(pwd):/app ghcr.io/ssimpson89/sparrowdo:latest sparrowdo"
 ```
 
 And then:
